@@ -844,7 +844,7 @@ const NODE_CLASS = RgthreePowerLoraLoader;
 app.registerExtension({
   name: "rgthree.PowerLoraLoader",
   async beforeRegisterNodeDef(nodeType: typeof LGraphNode, nodeData: ComfyNodeDef) {
-    if (nodeData.name === NODE_CLASS.type) {
+    if (nodeData.name === NODE_CLASS.type || nodeData.name == NodeTypesString.POWER_LORA_STACKER) {
       NODE_CLASS.setUp(nodeType, nodeData);
     }
   },
