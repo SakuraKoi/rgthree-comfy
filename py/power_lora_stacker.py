@@ -1,11 +1,11 @@
+import os
 import folder_paths
-
-from typing import Union
-
 import comfy
 import comfy.lora
 import comfy.utils
-import folder_paths
+
+from typing import Union
+
 
 from nodes import LoraLoader
 from .constants import get_category, get_name
