@@ -8,10 +8,19 @@
     <a href="#️-the-nodes">The Nodes</a> &nbsp; | &nbsp; <a href="#-improvements--features">Improvements & Features</a>  &nbsp; | &nbsp; <a href="#-link-fixer">Link Fixer</a>
 </p>
 <hr>
-
 A collection of nodes and improvements created while messing around with ComfyUI. I made them for myself to make my workflow cleaner, easier, and faster. You're welcome to try them out. But remember, I made them for my own use cases :)
 
 ![Context Node](./docs/rgthree_advanced.png)
+
+# Fork Modifications
+
+Added a PowerLoraStacker for https://github.com/larsupb/LoRA-Merger-ComfyUI, due to LoRA-Merger's lora stacker tooooo bad
+
+
+
+For self-use :)
+
+
 
 # Get Started
 
@@ -75,7 +84,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >    - Pro tip: `shortcut_key` can be multiple keys. For instance "alt + shift + !" would require
 >      pressing the alt key, the shift key, and the "!" (as in the "1" key, but with shift pressed)
 >      in order to trigger.
->    </details>
+>       </details>
 
 
 ## Context / Context Big
@@ -121,7 +130,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >    - from the properties, change the `Show Strengths` to choose between showing a single, simple
 >      strength value (which will be used for both model and clip), or a more advanced view with
 >      both model and clip strengths being modifiable.
->    </details>
+>       </details>
 
 
 ## ~~Lora Loader Stack~~
@@ -139,7 +148,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >    - Connect a `CLIP` to the input to encode the text, with both the `CLIP` and `CONDITIONING` output right from the node.
 >    - Connect a `MODEL` to the input to parse and load any `<lora:...>` tags in the text automatically, without
 >      needing a separate Lora Loaders
->    </details>
+>       </details>
 
 ## Power Prompt - Simple
 > Same as Power Prompt above, but without LORA support; made for a slightly cleaner negative prompt _(since negative prompts do not support loras)_.
@@ -225,7 +234,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >    -  `toggleRestriction` - Optionally, attempt to restrict the number of widgets that can be enabled to a maximum of one, or always one.
 >
 >        _Note: If using "max one" or "always one" then this is only enforced when clicking a toggle on this node; if nodes within groups are changed outside of the initial toggle click, then these restriction will not be enforced, and could result in a state where more than one toggle is enabled. This could also happen if nodes are overlapped with multiple groups._
->    </details>
+>       </details>
 
 ## Fast Groups Bypasser
 > _Same as **Fast Groups Muter** above, but sets the connected nodes to "Bypass" instead of "Mute"_
@@ -237,7 +246,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >    <summary>ℹ️ <i>More Information</i></summary>
 >
 >    - Add a collection of all connected nodes allowing a single-spot as a "dashboard" to quickly enable and disable nodes. Two distinct nodes; one for "Muting" connected nodes, and one for "Bypassing" connected nodes.
->    </details>
+>       </details>
 
 
 ## Fast Bypasser
@@ -251,7 +260,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >    - Connect nodes and, at the least, mute, bypass or enable them when the button is pressed.
 >    - Certain nodes expose additional actions. For instance, the `Seed` node you can set `Randomize Each Time` or `Use Last Queued Seed` when the button is pressed.
 >    - Also, from the node properties, set a shortcut key to toggle the button actions, without needing a click!
->    </details>
+>       </details>
 
 
 ## Node Collector
@@ -268,7 +277,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >    - 💡 Pro Tip #1: Connect this node's output to a **Fast Muter** or **Fast Bypasser** to have a single toggle there that can mute/bypass/enable many nodes with one click.
 >
 >    - 💡 Pro Tip #2: Connect a **Mute / Bypass Relay** node to this node's inputs to have the relay automatically dispatch a mute/bypass/enable change to the repeater.
->    </details>
+>       </details>
 
 
 ## Mute / Bypass Relay
@@ -291,7 +300,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >       For instance, you could configure an inverse relay which will send a MUTE when any of its
 >       inputs are active (instead of sending an ACTIVE signal), and send an ACTIVE signal when all
 >       of its inputs are muted (instead of sending a MUTE signal), etc.
->    </details>
+>       </details>
 
 
 ## Random Unmuter
@@ -301,7 +310,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >
 >    - **Note:** All input nodes MUST be muted to start; if not this node will not randomly unmute another. (This is powerful, as the generated image can be dragged in and the chosen input will already by unmuted and work w/o any further action.)
 >    - **Tip:** Connect a Repeater's output to this nodes input and place that Repeater on a group without any other inputs, and it will mute/unmute the entire group.
->    </details>
+>       </details>
 
 
 ## Label
@@ -322,7 +331,7 @@ Note, you can right-click on a bunch of the rgthree-comfy nodes and select `🛟
 >    - **Pro Tip #3:** Color values are hexidecimal strings, like "#FFFFFF" for white, or "#660000"
 >      for dark red. You can supply a 7th & 8th value (or 5th if using shorthand) to create a
 >      transluscent color. For instance, "#FFFFFF88" is semi-transparent white.
->    </details>
+>       </details>
 
 
 # Advanced Techniques
